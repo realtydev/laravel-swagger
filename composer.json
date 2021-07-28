@@ -1,5 +1,5 @@
 {
-    "name": "mtrajano/laravel-swagger",
+    "name": "realtydev/laravel-swagger",
     "description": "Auto generates the swagger documentation for a laravel project",
     "license": "MIT",
     "authors": [
@@ -25,12 +25,12 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "Mtrajano\\LaravelSwagger\\": "src/"
+            "realtydev\\LaravelSwagger\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mtrajano\\LaravelSwagger\\Tests\\": "tests/"
+            "realtydev\\LaravelSwagger\\Tests\\": "tests/"
         }
     },
     "suggest": {
@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mtrajano\\LaravelSwagger\\SwaggerServiceProvider"
+                "realtydev\\LaravelSwagger\\SwaggerServiceProvider"
             ]
         }
     }
