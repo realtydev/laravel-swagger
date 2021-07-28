@@ -33,7 +33,9 @@ class GenerateSwaggerDocCommand extends Command
      */
     protected $signature = 'laravel-swagger:generate
                             {--format=json : The format of the output, current options are json and yaml}
-                            {--api-version= : The version of the swagger docs. Generate for all version by default}';
+                            {--api-version= : The version of the swagger docs. Generate for all version by default}
+                            {--f|filter= : Filter to a specific route prefix, such as /api or /v2/api}
+                            {--o|output= : Output file to write the contents to, defaults to stdout}';
 
     /**
      * The console command description.
@@ -53,9 +55,12 @@ class GenerateSwaggerDocCommand extends Command
         $versions = $this->getVersionsConfigToGenerate();
 
         foreach ($versions as $versionConfig) {
-            $docs = (new Generator($versionConfig, $versionConfig['basePath']))->generate();
+            $filter = $this->option('filter') ?: null;
+
+            $docs = (new Generator($versionConfig, $versionConfig['basePath'],$filter))->generate();
 
             $format = $this->option('format');
+
 
             $formattedDocs = (new FormatterManager($docs))
                 ->setFormat($format)
