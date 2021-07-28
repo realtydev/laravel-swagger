@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\DataObjects;
+namespace realtydev\LaravelSwagger\DataObjects;
 
 class Middleware
 {

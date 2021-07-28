@@ -1,9 +1,9 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions\Security\Contracts;
+namespace realtydev\LaravelSwagger\Definitions\Security\Contracts;
 
-use Mtrajano\LaravelSwagger\DataObjects\Route;
-use Mtrajano\LaravelSwagger\LaravelSwaggerException;
+use realtydev\LaravelSwagger\DataObjects\Route;
+use realtydev\LaravelSwagger\LaravelSwaggerException;
 
 interface SecurityDefinitionsGenerator
 {

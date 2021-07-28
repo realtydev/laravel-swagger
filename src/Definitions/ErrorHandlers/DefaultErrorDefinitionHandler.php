@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions\ErrorHandlers;
+namespace realtydev\LaravelSwagger\Definitions\ErrorHandlers;
 
 class DefaultErrorDefinitionHandler extends DefaultDefinitionHandler
 {

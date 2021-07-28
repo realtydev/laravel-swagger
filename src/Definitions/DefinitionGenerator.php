@@ -1,14 +1,14 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions;
+namespace realtydev\LaravelSwagger\Definitions;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use Mtrajano\LaravelSwagger\DataObjects\Route;
-use Mtrajano\LaravelSwagger\Definitions\ErrorHandlers\DefaultDefinitionHandler;
+use realtydev\LaravelSwagger\DataObjects\Route;
+use realtydev\LaravelSwagger\Definitions\ErrorHandlers\DefaultDefinitionHandler;
 
 class DefinitionGenerator
 {

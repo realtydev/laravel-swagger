@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger;
+namespace realtydev\LaravelSwagger;
 
 class FormatterManager
 {

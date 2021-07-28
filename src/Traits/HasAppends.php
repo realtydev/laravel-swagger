@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Traits;
+namespace realtydev\LaravelSwagger\Traits;
 
 trait HasAppends
 {

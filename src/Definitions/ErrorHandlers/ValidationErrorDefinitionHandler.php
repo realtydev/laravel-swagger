@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions\ErrorHandlers;
+namespace realtydev\LaravelSwagger\Definitions\ErrorHandlers;
 
 use Illuminate\Validation\ValidationException;
 use ReflectionException;

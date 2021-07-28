@@ -4,8 +4,8 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
-use Mtrajano\LaravelSwagger\Definitions\ErrorHandlers\DefaultErrorDefinitionHandler;
-use Mtrajano\LaravelSwagger\Definitions\ErrorHandlers\ValidationErrorDefinitionHandler;
+use realtydev\LaravelSwagger\Definitions\ErrorHandlers\DefaultErrorDefinitionHandler;
+use realtydev\LaravelSwagger\Definitions\ErrorHandlers\ValidationErrorDefinitionHandler;
 
 return [
 

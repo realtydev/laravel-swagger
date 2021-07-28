@@ -1,9 +1,9 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger;
+namespace realtydev\LaravelSwagger;
 
 use Illuminate\Support\ServiceProvider;
-use Mtrajano\LaravelSwagger\Console\GenerateSwaggerDocCommand;
+use realtydev\LaravelSwagger\Console\GenerateSwaggerDocCommand;
 
 class SwaggerServiceProvider extends ServiceProvider
 {

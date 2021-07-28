@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger;
+namespace realtydev\LaravelSwagger;
 
 use Closure;
 use RuntimeException;

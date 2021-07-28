@@ -1,12 +1,12 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions\Security;
+namespace realtydev\LaravelSwagger\Definitions\Security;
 
 use Laravel\Passport\Passport;
-use Mtrajano\LaravelSwagger\DataObjects\Middleware;
-use Mtrajano\LaravelSwagger\DataObjects\Route;
-use Mtrajano\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
-use Mtrajano\LaravelSwagger\LaravelSwaggerException;
+use realtydev\LaravelSwagger\DataObjects\Middleware;
+use realtydev\LaravelSwagger\DataObjects\Route;
+use realtydev\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
+use realtydev\LaravelSwagger\LaravelSwaggerException;
 
 class OAuthSecurityDefinitionsGenerator implements SecurityDefinitionsGenerator
 {

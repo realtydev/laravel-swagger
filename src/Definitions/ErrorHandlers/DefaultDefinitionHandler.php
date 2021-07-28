@@ -1,8 +1,8 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions\ErrorHandlers;
+namespace realtydev\LaravelSwagger\Definitions\ErrorHandlers;
 
-use Mtrajano\LaravelSwagger\DataObjects\Route;
+use realtydev\LaravelSwagger\DataObjects\Route;
 
 abstract class DefaultDefinitionHandler
 {

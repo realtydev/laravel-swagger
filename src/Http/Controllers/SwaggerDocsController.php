@@ -1,9 +1,9 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Http\Controllers;
+namespace realtydev\LaravelSwagger\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use Mtrajano\LaravelSwagger\SwaggerDocsManager;
+use realtydev\LaravelSwagger\SwaggerDocsManager;
 
 class SwaggerDocsController extends Controller
 {

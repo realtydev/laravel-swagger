@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Http\Controllers;
+namespace realtydev\LaravelSwagger\Http\Controllers;
 
 use DateTime;
 use Illuminate\Http\Response;

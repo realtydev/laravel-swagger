@@ -1,9 +1,9 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions\Security;
+namespace realtydev\LaravelSwagger\Definitions\Security;
 
 use InvalidArgumentException;
-use Mtrajano\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
+use realtydev\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
 
 class SecurityDefinitionsFactory
 {
@@ -11,7 +11,7 @@ class SecurityDefinitionsFactory
      * @param string $securityType
      * @param string $authFlow
      * @return SecurityDefinitionsGenerator
-     * @throws \Mtrajano\LaravelSwagger\LaravelSwaggerException
+     * @throws \realtydev\LaravelSwagger\LaravelSwaggerException
      */
     public static function createGenerator(
         string $securityType,

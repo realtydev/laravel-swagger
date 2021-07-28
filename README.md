@@ -2,9 +2,9 @@
 
 Laravel Swagger scans your Laravel project's endpoints and auto generates a Swagger 2.0 documentation for you.
 
-[![Build Status](https://travis-ci.org/mtrajano/laravel-swagger.svg?branch=master)](https://travis-ci.org/mtrajano/laravel-swagger)
-[![Latest Stable Version](https://poser.pugx.org/mtrajano/laravel-swagger/v/stable)](https://packagist.org/packages/mtrajano/laravel-swagger)
-[![License](https://poser.pugx.org/mtrajano/laravel-swagger/license)](https://packagist.org/packages/mtrajano/laravel-swagger)
+[![Build Status](https://travis-ci.org/realtydev/laravel-swagger.svg?branch=master)](https://travis-ci.org/realtydev/laravel-swagger)
+[![Latest Stable Version](https://poser.pugx.org/realtydev/laravel-swagger/v/stable)](https://packagist.org/packages/realtydev/laravel-swagger)
+[![License](https://poser.pugx.org/realtydev/laravel-swagger/license)](https://packagist.org/packages/realtydev/laravel-swagger)
 
 ## About
 
@@ -29,13 +29,13 @@ By default a route with the generated docs will be available in the `/docs` rout
 
 ## Installation
 
-The package can easily be installed by running `composer require mtrajano/laravel-swagger` in your project's root folder.
+The package can easily be installed by running `composer require realtydev/laravel-swagger` in your project's root folder.
 
-If you are running a version of Laravel < 5.5 also make sure you add `Mtrajano\LaravelSwagger\SwaggerServiceProvider::class` to the `providers` array in `config/app.php`.
+If you are running a version of Laravel < 5.5 also make sure you add `realtydev\LaravelSwagger\SwaggerServiceProvider::class` to the `providers` array in `config/app.php`.
 
 This will register the artisan command that will be available to you.
 
-You can also override the default config provided by the application by running `php artisan vendor:publish --provider "Mtrajano\LaravelSwagger\SwaggerServiceProvider"` in your projects root and change the configuration in the new `config/laravel-swagger.php` file created.
+You can also override the default config provided by the application by running `php artisan vendor:publish --provider "realtydev\LaravelSwagger\SwaggerServiceProvider"` in your projects root and change the configuration in the new `config/laravel-swagger.php` file created.
 
 ## Configuration
 
@@ -299,11 +299,11 @@ class ProductController
 The model definition fields will be obtained from table `columns` returned by
 `Schema::getColumnListing($model->getTable())` function.
 
-If you want use the fields from `$appends` attribute, use the trait 'Mtrajano\LaravelSwagger\Traits\HasAppends' in your
+If you want use the fields from `$appends` attribute, use the trait 'realtydev\LaravelSwagger\Traits\HasAppends' in your
 model class. E.g.:
 
 ```php
-use Mtrajano\LaravelSwagger\Traits\HasAppends;
+use realtydev\LaravelSwagger\Traits\HasAppends;
 
 class MyModel extends Model
 {
@@ -349,7 +349,7 @@ Schema::create('orders', function (Blueprint $table) {
 
 // Models
 use Illuminate\Database\Eloquent\Relations;
-use Mtrajano\LaravelSwagger\Traits\HasAppends;
+use realtydev\LaravelSwagger\Traits\HasAppends;
 
 class Order extends Model
 {

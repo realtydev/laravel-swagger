@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Parameters\Concerns;
+namespace realtydev\LaravelSwagger\Parameters\Concerns;
 
 use Illuminate\Support\Str;
 

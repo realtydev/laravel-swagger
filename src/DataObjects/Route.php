@@ -1,6 +1,6 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\DataObjects;
+namespace realtydev\LaravelSwagger\DataObjects;
 
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\Model as LaravelModel;
@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Routing\Route as LaravelRoute;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
-use Mtrajano\LaravelSwagger\LaravelSwaggerException;
+use realtydev\LaravelSwagger\LaravelSwaggerException;
 use phpDocumentor\Reflection;
 
 class Route
@@ -19,7 +19,7 @@ class Route
     private $_route;
 
     /**
-     * @var \Mtrajano\LaravelSwagger\DataObjects\Middleware[]
+     * @var \realtydev\LaravelSwagger\DataObjects\Middleware[]
      */
     private $_middleware;
 
@@ -52,7 +52,7 @@ class Route
     }
 
     /**
-     * @return \Mtrajano\LaravelSwagger\DataObjects\Middleware[]
+     * @return \realtydev\LaravelSwagger\DataObjects\Middleware[]
      */
     public function getMiddleware(): array
     {
@@ -127,7 +127,7 @@ class Route
     }
 
     /**
-     * @return \Mtrajano\LaravelSwagger\DataObjects\Middleware[]
+     * @return \realtydev\LaravelSwagger\DataObjects\Middleware[]
      */
     private function _formatMiddleware(): array
     {

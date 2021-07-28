@@ -1,10 +1,10 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Responses;
+namespace realtydev\LaravelSwagger\Responses;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Mtrajano\LaravelSwagger\DataObjects\Route;
+use realtydev\LaravelSwagger\DataObjects\Route;
 use ReflectionException;
 
 class SuccessResponseGenerator

@@ -1,11 +1,11 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Console;
+namespace realtydev\LaravelSwagger\Console;
 
 use Illuminate\Console\Command;
-use Mtrajano\LaravelSwagger\FormatterManager;
-use Mtrajano\LaravelSwagger\Generator;
-use Mtrajano\LaravelSwagger\SwaggerDocsManager;
+use realtydev\LaravelSwagger\FormatterManager;
+use realtydev\LaravelSwagger\Generator;
+use realtydev\LaravelSwagger\SwaggerDocsManager;
 
 class GenerateSwaggerDocCommand extends Command
 {
@@ -45,7 +45,7 @@ class GenerateSwaggerDocCommand extends Command
     /**
      * Execute the console command.
      *
-     * @throws \Mtrajano\LaravelSwagger\LaravelSwaggerException
+     * @throws \realtydev\LaravelSwagger\LaravelSwaggerException
      * @throws \ReflectionException
      */
     public function handle(): void

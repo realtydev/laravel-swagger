@@ -1,9 +1,9 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger\Definitions\Security;
+namespace realtydev\LaravelSwagger\Definitions\Security;
 
-use Mtrajano\LaravelSwagger\DataObjects\Route;
-use Mtrajano\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
+use realtydev\LaravelSwagger\DataObjects\Route;
+use realtydev\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
 
 class JWTSecurityDefinitionsGenerator implements SecurityDefinitionsGenerator
 {

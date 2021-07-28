@@ -1,14 +1,14 @@
 <?php
 
-namespace Mtrajano\LaravelSwagger;
+namespace realtydev\LaravelSwagger;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Str;
-use Mtrajano\LaravelSwagger\DataObjects\Route;
-use Mtrajano\LaravelSwagger\Definitions\DefinitionGenerator;
-use Mtrajano\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
-use Mtrajano\LaravelSwagger\Definitions\Security\SecurityDefinitionsFactory;
-use Mtrajano\LaravelSwagger\Responses\ResponseGenerator;
+use realtydev\LaravelSwagger\DataObjects\Route;
+use realtydev\LaravelSwagger\Definitions\DefinitionGenerator;
+use realtydev\LaravelSwagger\Definitions\Security\Contracts\SecurityDefinitionsGenerator;
+use realtydev\LaravelSwagger\Definitions\Security\SecurityDefinitionsFactory;
+use realtydev\LaravelSwagger\Responses\ResponseGenerator;
 use phpDocumentor\Reflection\DocBlock\Tags\Generic;
 use phpDocumentor\Reflection\DocBlockFactory;
 use ReflectionMethod;

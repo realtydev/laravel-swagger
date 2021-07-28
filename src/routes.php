@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Mtrajano\LaravelSwagger\Http\Controllers\SwaggerAssetController;
-use Mtrajano\LaravelSwagger\Http\Controllers\SwaggerDocsController;
+use realtydev\LaravelSwagger\Http\Controllers\SwaggerAssetController;
+use realtydev\LaravelSwagger\Http\Controllers\SwaggerDocsController;
 
 Route::get(config('laravel-swagger.route.path'), [
     'as' => config('laravel-swagger.route.name'),
