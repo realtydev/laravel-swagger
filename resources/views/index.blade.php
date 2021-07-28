@@ -3,8 +3,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('laravel-swagger.title') .' - '. $currentVersion }}</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ laravel_swagger_asset('swagger-ui.css') }}" >
@@ -136,7 +134,7 @@
 
             requestInterceptor: function() {
                 this.headers['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
-                return request;
+                return this;
             },
 
             presets: [
