@@ -321,7 +321,7 @@ class Generator
 
     private function isFilteredRoute()
     {
-        return !preg_match('/^' . preg_quote($this->routeFilter, '/') . '/', $this->route->uri());
+        return !preg_match('/^' . preg_quote($this->routeFilter, '/') . '/', $this->route->getUri());
     }
 
     private function addActionResponses(): void
