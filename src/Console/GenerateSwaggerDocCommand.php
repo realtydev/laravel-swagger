@@ -57,7 +57,7 @@ class GenerateSwaggerDocCommand extends Command
         foreach ($versions as $versionConfig) {
             $filter = $this->option('filter') ?: null;
 
-            $docs = (new Generator($versionConfig, $versionConfig['basePath'],$filter))->generate();
+            $docs = (new Generator($versionConfig,$filter))->generate();
 
             $format = $this->option('format');
 
