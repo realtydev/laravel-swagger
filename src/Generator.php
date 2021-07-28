@@ -70,6 +70,10 @@ class Generator
         foreach ($this->getAppRoutes() as $route) {
             $this->route = $route;
 
+            if ($this->routeFilter && $this->isFilteredRoute()) {
+                continue;
+            }
+
             if (!isset($this->docs['paths'][$this->getRouteUri()])) {
                 $this->docs['paths'][$this->getRouteUri()] = [];
             }
@@ -313,6 +317,11 @@ class Generator
         } catch (\Exception $e) {
             return [false, '', '', []];
         }
+    }
+
+    private function isFilteredRoute()
+    {
+        return !preg_match('/^' . preg_quote($this->routeFilter, '/') . '/', $this->route->uri());
     }
 
     private function addActionResponses(): void
