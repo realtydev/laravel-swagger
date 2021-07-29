@@ -152,9 +152,13 @@
 
             onComplete: function () {
                 appendApiVersionSelectorToVersions();
-                let element = document.querySelector(".schemes select")
-                element.value = location.protocol.replace(/:/g, '')
-                console.log(element.value)
+                // Select Scheme for current page if more than one
+                setTimeout(function (){
+                    let element = document.querySelector(".schemes select")
+                    element.value = location.protocol.replace(/:/g, '')
+                    console.log(element.value)
+                },100)
+
             }
         });
     }
