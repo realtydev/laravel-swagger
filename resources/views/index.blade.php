@@ -152,6 +152,9 @@
 
             onComplete: function () {
                 appendApiVersionSelectorToVersions();
+                let element = document.querySelector(".schemes select")
+                element.value = location.protocol.replace(/:/g, '')
+                console.log(element.value)
             }
         });
     }
