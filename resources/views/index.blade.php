@@ -132,10 +132,12 @@
 
             url: "{!! $filePath !!}",
 
+            /**
             requestInterceptor: function() {
-                //this.headers['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
+                this.headers['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
                 return this;
             },
+            **/
 
             presets: [
                 SwaggerUIBundle.presets.apis,
