@@ -308,7 +308,7 @@ class Generator
             /** @var Generic $actionTag */
             $actionTag = collect($parsedComment->getTagsByName('tags'))->first();
             if ($actionTag !== null && $actionTag->getDescription() !== null) {
-                $tags = explode(' ', $actionTag->getDescription()->getBodyTemplate());
+                $tags = explode(',', $actionTag->getDescription()->getBodyTemplate());
             } else {
                 $tags = [];
             }
