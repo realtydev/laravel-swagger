@@ -148,7 +148,7 @@
                 SwaggerUIBundle.plugins.DownloadUrl
             ],
 
-            layout: "BaseLayout",
+            layout: "StandaloneLayout",
 
             onComplete: function () {
                 appendApiVersionSelectorToVersions();
