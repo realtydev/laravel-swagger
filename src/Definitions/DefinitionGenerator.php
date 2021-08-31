@@ -85,8 +85,12 @@ class DefinitionGenerator
     private function generateExampleData(string $column): ?string
     {
         $modelFake = $this->getModelFake();
-
-        return $modelFake ? (string) $modelFake->{$column} : null;
+        $result = $modelFake->{$column};
+        //if Json
+        if(is_array($result)){
+            $result = "$modelFake->{$column}";
+        }
+        return $modelFake ? (string) $result : null;
     }
 
     /**
@@ -155,8 +159,8 @@ class DefinitionGenerator
     {
         try {
             DB::beginTransaction();
-
-            return factory(get_class($this->model))->create();
+            $model = $this->model;
+            return $model->factory()->create();
         } catch (InvalidArgumentException $e) {
             return null;
         } finally {
