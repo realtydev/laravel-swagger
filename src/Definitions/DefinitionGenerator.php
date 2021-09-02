@@ -160,7 +160,10 @@ class DefinitionGenerator
         try {
             DB::beginTransaction();
             $model = $this->model;
-            return $model->factory()->create();
+            if($model->factory()){
+                return $model->factory()->create();
+            }
+            return null;
         } catch (InvalidArgumentException $e) {
             return null;
         } finally {
