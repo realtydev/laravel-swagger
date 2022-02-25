@@ -69,6 +69,11 @@ class Generator
 
         foreach ($this->getAppRoutes() as $route) {
             $this->route = $route;
+            [$class, $method] = Str::parseCallback($this->route->getAction());
+            if (!class_exists($class) || (!empty($method) && !method_exists($class,$method))) {
+                echo 'Error: Target class method ['.$class.'::'.$method."] does not exist\n";
+                continue;
+            }
 
             if ($this->routeFilter && $this->isFilteredRoute()) {
                 continue;
@@ -84,7 +89,7 @@ class Generator
                 if (in_array($this->method, $this->config['ignoredMethods'])) {
                     continue;
                 }
-
+                
                 $this->generatePath();
             }
         }
@@ -284,7 +289,7 @@ class Generator
     {
         [$class, $method] = Str::parseCallback($this->route->getAction());
 
-        if (!$class || !$method) {
+        if (!class_exists($class) || !method_exists($class,$method)) {
             return null;
         }
 

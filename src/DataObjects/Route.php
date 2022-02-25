@@ -131,9 +131,16 @@ class Route
      */
     private function _formatMiddleware(): array
     {
-        return array_map(function ($middleware) {
-            return new Middleware($middleware);
-        }, $this->_route->gatherMiddleware());
+        try {
+            return array_map(function ($middleware) {
+                return new Middleware($middleware);
+            }, $this->_route->gatherMiddleware());
+        } catch (\Exception $e)
+        {
+            echo 'Error: '.$e->getMessage()."\n";
+            return [];
+        }
+        
     }
 
     /**
@@ -161,7 +168,7 @@ class Route
     {
         [$class] = Str::parseCallback($this->getAction());
 
-        if (!$class) {
+        if (!class_exists($class)) {
             return null;
         }
 
@@ -193,7 +200,7 @@ class Route
     {
         [$class, $method] = Str::parseCallback($this->getAction());
 
-        if (!$class || !$method) {
+        if (!class_exists($class) || !method_exists($class,$method)) {
             return null;
         }
 
@@ -231,7 +238,7 @@ class Route
     public function getFormRequestFromParams(): ?FormRequest
     {
         $class = $this->getFormRequestClassFromParams();
-        if (!$class) {
+        if (!class_exists($class)) {
             return null;
         }
 
