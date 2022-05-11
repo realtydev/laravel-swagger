@@ -61,7 +61,7 @@ class Generator
     {
         $this->docs = $this->getBaseStructure();
 
-        $securityDefinitions = $this->generateSecurityDefinitions($this->config['security_name'],$this->config['security_auth']);
+        $securityDefinitions = $this->generateSecurityDefinitions();
         if ($securityDefinitions) {
             $this->docs['securityDefinitions'] = $securityDefinitions;
             $this->hasSecurityDefinitions = true;
