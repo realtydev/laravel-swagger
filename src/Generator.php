@@ -61,7 +61,7 @@ class Generator
     {
         $this->docs = $this->getBaseStructure();
 
-        $securityDefinitions = $this->generateSecurityDefinitions();
+        $securityDefinitions = $this->generateSecurityDefinitions($this->config['security_name'],$this->config['security_auth']);
         if ($securityDefinitions) {
             $this->docs['securityDefinitions'] = $securityDefinitions;
             $this->hasSecurityDefinitions = true;
@@ -168,13 +168,13 @@ class Generator
     /**
      * @throws LaravelSwaggerException
      */
-    protected function generateSecurityDefinitions(string $securityName): array
+    protected function generateSecurityDefinitions(string $securityName, string $securityAuth): array
     {
         if (!$this->securityDefinitionGenerator) {
             return [];
         }
 
-        return $this->securityDefinitionGenerator->generate($securityName);
+        return $this->securityDefinitionGenerator->generate($securityName,$securityAuth);
     }
 
     /**
