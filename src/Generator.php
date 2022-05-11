@@ -61,7 +61,7 @@ class Generator
     {
         $this->docs = $this->getBaseStructure();
 
-        $securityDefinitions = $this->generateSecurityDefinitions($this->config['security_name'],$this->config['security_auth']);
+        $securityDefinitions = $this->generateSecurityDefinitions($this->config['security_name']);
         if ($securityDefinitions) {
             $this->docs['securityDefinitions'] = $securityDefinitions;
             $this->hasSecurityDefinitions = true;
@@ -168,13 +168,13 @@ class Generator
     /**
      * @throws LaravelSwaggerException
      */
-    protected function generateSecurityDefinitions(string $securityName, string $securityAuth): array
+    protected function generateSecurityDefinitions(string $securityName): array
     {
         if (!$this->securityDefinitionGenerator) {
             return [];
         }
 
-        return $this->securityDefinitionGenerator->generate($securityName,$securityAuth);
+        return $this->securityDefinitionGenerator->generate($securityName);
     }
 
     /**
@@ -236,6 +236,7 @@ class Generator
     {
         $routeDefinitions = $this->securityDefinitionGenerator->generateForRoute($this->route);
         if ($routeDefinitions) {
+            $this->docs['security'] = $routeDefinitions;
             $this->docs['paths'][$this->getRouteUri()][$this->method]['security'] = $routeDefinitions;
         }
     }

@@ -182,6 +182,18 @@ return [
 
             'security_definition_type' => 'oauth2',
 
+
+            /*
+            |--------------------------------------------------------------------------
+            | Security Name
+            |--------------------------------------------------------------------------
+            |
+            | You can choose a custome security header name other than Authorization
+            |
+            */
+
+            'security_name' => 'Authorization',
+
             /*
             |------------------------------------------------------------------
             | File format

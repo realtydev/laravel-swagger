@@ -10,10 +10,10 @@ class JWTSecurityDefinitionsGenerator implements SecurityDefinitionsGenerator
     /**
      * {@inheritdoc}
      */
-    public function generate(String $name = 'Authorization', String $auth = 'Bearer'): array
+    public function generate(String $name = 'Authorization'): array
     {
         return [
-            $auth => [
+            'Bearer' => [
                 'type' => 'apiKey',
                 'name' => $name,
                 'in' => 'header',
